@@ -15,11 +15,20 @@ namespace AssociationBetweenClasses
 		{
 			UseInheritance();
 			UseComposition();
-			var customer = new Customer();
-			Amazon.RateCalculator calculater = new RateCalculator();
-
+			UseAccessModifiers();
+			UseConstructorAndInheritance();
+			
 		}
 
+		static void UseConstructorAndInheritance()
+		{
+			var car = new Car("1231231");
+		}
+		static void UseAccessModifiers()
+		{
+			var customer = new Customer();
+			Amazon.RateCalculator calculater = new RateCalculator();
+		}
 		static void UseInheritance()
 		{
 			var text = new Text();
@@ -33,7 +42,7 @@ namespace AssociationBetweenClasses
 			var dbMigrator = new DbMigrator(new Logger());
 
 			var logger = new Logger();
-			var installer = new Installer(logger));
+			var installer = new Installer(logger);
 
 			dbMigrator.Migrate();
 			installer.Install();
