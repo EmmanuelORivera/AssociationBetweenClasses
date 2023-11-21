@@ -17,7 +17,15 @@ namespace AssociationBetweenClasses
 			UseComposition();
 			UseAccessModifiers();
 			UseConstructorAndInheritance();
-			
+			var title = new Title();
+			Shape shape = title;
+
+			title.Width = 200;
+			shape.Width = 100;
+
+            Console.WriteLine(title.Width);
+
+			StreamReader reader = new StreamReader(new MemoryStream()); // the new MemoryStream is upcasting to the Strem class
 		}
 
 		static void UseConstructorAndInheritance()
