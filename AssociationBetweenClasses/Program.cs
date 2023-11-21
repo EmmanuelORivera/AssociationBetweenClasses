@@ -1,5 +1,6 @@
 ﻿using Amazon;
 using System;
+using System.Collections;
 
 namespace AssociationBetweenClasses
 {
@@ -28,6 +29,12 @@ namespace AssociationBetweenClasses
 			StreamReader reader = new StreamReader(new MemoryStream()); // the new MemoryStream is upcasting to the Strem class
 		}
 
+		static void UseBoxingAndUnboxing()
+		{
+			var list = new ArrayList();
+			list.Add(1);
+			list.Add("Emmanuel");
+		}
 		static void UseConstructorAndInheritance()
 		{
 			var car = new Car("1231231");
