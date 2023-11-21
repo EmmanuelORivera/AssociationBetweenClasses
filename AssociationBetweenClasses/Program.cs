@@ -1,14 +1,23 @@
-﻿using System;
+﻿using Amazon;
+using System;
 
 namespace AssociationBetweenClasses
 {
+	public class GoldCustomer : Customer
+	{
+		public void OfferVouchar()
+		{
+		}
+	}
 	internal class Program
 	{
 		static void Main(string[] args)
 		{
 			UseInheritance();
 			UseComposition();
-			
+			var customer = new Customer();
+			Amazon.RateCalculator calculater = new RateCalculator();
+
 		}
 
 		static void UseInheritance()
